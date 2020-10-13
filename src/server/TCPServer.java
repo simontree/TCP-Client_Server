@@ -10,7 +10,7 @@ import java.net.Socket;
 
 public class TCPServer {
 
-    public void TCPServer(){
+    public void server(){
 
     try{
         int port = 2451;
@@ -18,11 +18,11 @@ public class TCPServer {
         ServerSocket server = new ServerSocket(port);
 
         //receive connection requests from client
-        Socket clientRequest = server.accept();
-        System.out.println("Clientrequest: " +clientRequest);
+        Socket socket = server.accept();
+        System.out.println("Clientrequest: " +socket);
 
         //create inputstream for data from client
-        InputStream is = clientRequest.getInputStream();
+        InputStream is = socket.getInputStream();
         System.out.println("inputStream: " +is);
 
         //dataInputStream
@@ -30,7 +30,7 @@ public class TCPServer {
         int readIntValue = dis.read();
         System.out.println("read input int: "+ readIntValue);
 
-        OutputStream os = clientRequest.getOutputStream();
+        OutputStream os = socket.getOutputStream();
 
         //send String to Client
         String someText = "Moin";

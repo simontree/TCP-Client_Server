@@ -18,27 +18,25 @@ public class TCPFileTransferUI {
         System.err.println("at least two arguments required");
         return;
     }
-
     String fileName = args[0];
     String hostName = null;
     int portNumber = -1;
 
     String portString = null;
 
-        //case 1 for sending
+        //case 1 for sending -> client
     if(args.length == 3) {
         hostName = args[1];
         portString = args[2];
     }else{
-        //case 2 for receiving
+        //case 2 for receiving -> server
         if(args.length == 2) {
             portString = args[1];
         }
     }
 
-    portNumber = Integer.parseInt(portString);
-
     TCPFileTransfer tcpFileTransfer = new TCPFileTransferImpl();
+    portNumber = Integer.parseInt(portString);
 
     if(hostName == null){
         //receive

@@ -1,16 +1,13 @@
 package server;
 
 
-import java.io.DataInputStream;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.OutputStream;
+import java.io.*;
 import java.net.ServerSocket;
 import java.net.Socket;
 
 public class TCPServer {
 
-    public void server(){
+    public static void main(String[] args){
 
     try{
         int port = 2451;
@@ -30,6 +27,14 @@ public class TCPServer {
         int readIntValue = dis.read();
         System.out.println("read input int: "+ readIntValue);
 
+        //convert inputstream into String with StreamReader and BufferedReader
+        InputStreamReader isr = new InputStreamReader(is);
+        BufferedReader br = new BufferedReader(isr);
+
+        String readString = br.readLine();
+        System.out.println("client input: "+readString);
+
+        //create outputstream
         OutputStream os = socket.getOutputStream();
 
         //send String to Client

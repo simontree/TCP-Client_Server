@@ -2,7 +2,7 @@
   <artifact type="jar" name="TCPClient">
     <output-path>$PROJECT_DIR$/out/artifacts/TCPClient</output-path>
     <root id="archive" name="TCPClient.jar">
-      <element id="module-output" name="TCP-Server" />
+      <element id="module-output" name="TCPTransferAndSensordata" />
     </root>
   </artifact>
 </component>

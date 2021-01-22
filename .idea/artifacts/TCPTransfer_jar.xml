@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="TCPTransfer:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/TCPTransfer_jar</output-path>
+    <root id="archive" name="TCPTransferAndSensordata.jar">
+      <element id="module-output" name="TCPTransferAndSensordata" />
+    </root>
+  </artifact>
+</component>

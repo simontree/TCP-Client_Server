@@ -3,6 +3,7 @@ package sensordata;
 import java.io.*;
 
 public class SensorDataTransferMachine implements SensorDataSender, SensorDataReceiver{
+
     @Override
     public SensorData receiveSensorData(InputStream is) throws IOException {
         DataInputStream dais = new DataInputStream(is);
